@@ -106,7 +106,7 @@ $message = '';
                                 <td><?php echo $employee->name ?></td>
                                 <td><?php echo $employee->age ?></td>
                                 <td><?php echo $employee->address ?></td>
-                                <td><?php echo $employee->calculateSalary() ?></td>
+                                <td><?php echo round($employee->calculateSalary()) ?></td>
                                 <td><?php echo $employee->tax ?></td>
                             </tr>
                         <?php endforeach; ?>
