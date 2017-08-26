@@ -2,12 +2,12 @@
 
 class Employee
 {
-    public $id;
-    public $name;
-    public $age;
-    public $address;
-    public $tax;
-    public $salary;
+    private $id;
+    private  $name;
+    private  $age;
+    private  $address;
+    private  $tax;
+    private  $salary;
 
     public function __construct($name, $age, $address, $tax, $salary)
     {
@@ -16,6 +16,16 @@ class Employee
         $this->address = $address;
         $this->tax = $tax;
         $this->salary = $salary;
+    }
+
+    /**
+     * To access private attributes
+     * @param $prop
+     * @return mixed
+     */
+    public function __get($prop)
+    {
+        return $this->$prop;
     }
 
     /**
